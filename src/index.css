@@ -1,13 +1,257 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Dosis&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Dosis', sans-serif;
+}
+#root{
+    background-color: rgb(250, 250, 250);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.app{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #fff;
+}
+
+.img{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border-radius: 100px;
+    filter: invert(100%);
+}
+
+.head{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    /* margin-bottom: 10px; */
+    background-color: rgb(19, 7, 12);
+    background-image: -webkit-gradient(linear,right top, left bottom, from(rgb(212, 194, 194)), to(black));
+    color: white;
+    z-index: 10;
+}
+
+.head h1{
+    text-align: center;
+    text-shadow: 2px 2px #ce4444;
+}
+
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    height: 5vh;
+    align-items: center;
+}
+
+.nl{
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px;
+    color: white;
+}
+
+.nl:hover{
+    color: yellow;
+}
+
+.anl{
+    color: green;
+}
+
+.dfrm, .frm, .ip, .home{
+    display: flex;
+    /* border: 2px solid red; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.dfrm{
+    height: 72vh;
+    background-color: rgb(243, 235, 235);
+
+}
+
+.home{
+    width: 100%;
+    height: 70vh;
+    font-size: 5em;
+    text-align: center;
+}
+
+.showin p{
+    text-align: center;
+}
+
+.frm{
+    width: 70%;
+    height: 50vh;
+    justify-content: space-around;
+    background-color: white;
+    box-shadow: 5px 5px #888888;
+}
+
+
+
+.ip, .ip input{
+    width: 70%;
+}
+
+.ip input{
+    margin: 10px;
+    padding: 5px;
+}
+
+.write{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    background-color: rgb(245, 236, 236);
+}
+
+.title, .content{
+    padding: 5px;
+}
+
+.title{
+    height: 30px;
+}
+
+.content{
+    height: 120px;
+}
+
+.title, .content{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px #888888;
+}
+
+.btn{
+    width: 50%;
+}
+
+.b1{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+}
+
+.abs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: 200px;
+    background-color: rgb(224, 212, 212);
+}
+
+
+.show{
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 45px;
+    background-color: rgb(245, 236, 236);
+}
+
+.showin{
+    max-width: 30vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 2vw;
+    background-color: white;
+    box-shadow: 5px 5px #888888;
+    min-height: 25vh;
+    position: relative;
+}
+
+.showin h2, p:nth-child(4){
+    text-align: center;
+}
+
+.foot{
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: black;
+    color: white;
+   z-index: 10;
+}
+
+
+
+@media (max-width: 800px)
+{
+   
+    .show{
+    
+        grid-gap: 50px;
+        grid-template-columns: 1fr;
+    }
+
+    .title, .content{
+        width: 90%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+
+    .showin{
+       
+        max-width: 90vw;
+        margin-left: 5vw;
+    }
+
+    .btn{
+        width: 10%;
+    }
+
+    .ip, .ip input{
+        width: 90%;
+    }
+
+    .ip, .ip input{
+        width: 90%;
+    }
+
+}
+
+@media (min-width: 800px) and (max-width: 1200px)
+{
+    .show{
+    
+        grid-gap: 50px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .showin{
+       
+        max-width: 45vw;
+        margin-left: 5vw;
+    
+    }
+
 }
